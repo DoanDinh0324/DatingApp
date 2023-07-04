@@ -1,8 +1,10 @@
 using API.Data;
 using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DataContext>(otp =>
@@ -18,6 +20,7 @@ var app = builder.Build();
 
 builder.Services.AddCors();
 // Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
