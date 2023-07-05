@@ -21,6 +21,7 @@ builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
+builder.Services.AddCors();
 // Configure the HTTP request pipeline.
 
 if (app.Environment.IsDevelopment())
@@ -40,4 +41,8 @@ app.MapControllers();
 app.Run();
 
 
-app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+app.UseCors(builder => builder
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials()
+    .WithOrigins("https://localhost:4200"));
