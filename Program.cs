@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Http;
+using Microsoft.Extensions.Hosting;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +26,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
 builder.Services.AddCors();
+
 // Configure the HTTP request pipeline.
 
 if (app.Environment.IsDevelopment())
@@ -36,13 +41,8 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://locahost:4200"));
+
 app.MapControllers();
 
 app.Run();
-
-
-app.UseCors(builder => builder
-    .AllowAnyHeader()
-    .AllowAnyMethod()
-    .AllowCredentials()
-    .WithOrigins("https://localhost:4200"));

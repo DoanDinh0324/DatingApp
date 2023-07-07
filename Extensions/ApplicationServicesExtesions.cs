@@ -12,7 +12,7 @@ namespace API.Extensions
             services.AddScoped<ITokenService, TokenService>();
             services.AddDbContext<DataContext>(otp =>
                     {
-                         otp.UseSqlite(config.GetConnectionString(config["DefaultConnection"]));
+                         otp.UseSqlite(config.GetConnectionString("DefaultConnection"));
                     });
 
                     return services;
