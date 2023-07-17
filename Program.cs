@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Identity;
 using API.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
+var host = WebApplication.CreateBuilder(args).Build;
+
 
 // Add services to the container.
 
@@ -31,11 +33,11 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
+// }
 
 app.UseMiddleware<ExceptionMiddleware>();
 
@@ -54,7 +56,6 @@ var services = scope.ServiceProvider;
 try
 {
     var context = services.GetRequiredService<DataContext>();
-    var userManager = services.GetRequiredService<UserManager<AppUser>>();
     await context.Database.MigrateAsync();
     await Seed.SeedUsers(context);
 }
@@ -63,6 +64,5 @@ catch (Exception ex)
     var logger = services.GetService<ILogger<Program>>();
     logger.LogError(ex, "An error occurred during migration");
 }
-
 
 app.Run();
