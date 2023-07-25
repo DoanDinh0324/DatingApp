@@ -1,5 +1,6 @@
 using API.DTOs;
 using API.Entities;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -20,6 +21,5 @@ namespace API.Interfaes
         Task<IEnumerable<MemberDto>> GetMembersAsync();
 
         Task<MemberDto> GetMemberAsync(string username);
-        
     }
 }

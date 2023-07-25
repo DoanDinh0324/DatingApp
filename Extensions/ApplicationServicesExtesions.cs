@@ -1,4 +1,5 @@
 using API.Data;
+using API.Entities;
 using API.Helpers;
 using API.Interfaes;
 using API.Services;

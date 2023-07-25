@@ -31,6 +31,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 
+
 // Configure the HTTP request pipeline.
 
 // if (app.Environment.IsDevelopment())
@@ -38,6 +39,7 @@ var app = builder.Build();
 //     app.UseSwagger();
 //     app.UseSwaggerUI();
 // }
+
 
 app.UseMiddleware<ExceptionMiddleware>();
 
