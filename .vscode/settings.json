@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "DatingApp.sln",
+    "git.ignoreLimitWarning": true
+}
