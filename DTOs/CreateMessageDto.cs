@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace API.DTOs
 {
-    public class LoginDto
+    public class CreateMessageDto
     {
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public string RecipientUsername { get; set; }
+        public string Content { get; set; }
         
     }
 }

@@ -25,7 +25,7 @@ namespace API.Services
             _cloudinary = new Cloudinary(acc);
         }
 
-        public async Task<ImageUploadResult> AddPhotoAsync(IFormFile file)
+        public async Task<ImageUploadResult> AddPhotoAsync(IFormFile file) //Represents a file sent with the HttpRequest
         {
             var uploadResult = new ImageUploadResult();
 
