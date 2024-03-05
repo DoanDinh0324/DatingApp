@@ -2956,11 +2956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Doan Dinh\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Doan Dinh\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\Users\\Doan Dinh\\DatingApp\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Doan Dinh\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Doan Dinh\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Doan Dinh\\DatingApp\\API\\obj\\",
+      "outputPath": "C:\\Users\\Doan Dinh\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Doan Dinh\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2969,8 +2969,7 @@
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.313\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3059,7 +3058,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.313\\RuntimeIdentifierGraph.json"
       }
     }
   }
